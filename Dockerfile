@@ -7,4 +7,5 @@ RUN npm run build
 
 # Use a lightweight web server to serve the static files
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
